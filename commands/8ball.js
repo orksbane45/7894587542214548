@@ -2,22 +2,22 @@ exports.run = function(client, message, args) {
   let nb = Math.floor((Math.random() * 6) + 1);
 
   if (nb == 1) {
-    message.channel.sendMessage(':8ball: La réponse est : jamais');
+    message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : jamais');
   }
     if (nb == 2) {
-      message.channel.sendMessage(':8ball: La réponse est : surement');
+      message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : surement');
     }
       if (nb == 3) {
-    message.channel.sendMessage(':8ball: La réponse est : peut-être');
+    message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : peut-être');
     }
     if (nb == 4) {
-      message.channel.sendMessage(':8ball: La réponse est : oui');
+      message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : oui');
     }
     if (nb == 5) {
-      message.channel.sendMessage(':8ball: La réponse est : non');
+      message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : non');
     }
     if (nb == 6)  {
-      message.channel.sendMessage(':8ball: La réponse est : de loin');
+      message.channel.sendMessage('<:IZBgames:453594840374968350>  La réponse est : de loin');
   }
 }
 
