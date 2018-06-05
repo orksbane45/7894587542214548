@@ -1,3 +1,2 @@
-# InsinityZ-Bot
-Bot français multifonction ! :)
+# cc
 
