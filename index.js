@@ -54,7 +54,6 @@ client.elevation = message => {
   let admin_role = message.guild.roles.find('admin', settings.adminrolename);
   if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
   if (message.author.id === settings.ownerid) permlvl = 4;
-  if (message.author.id === settings.happy) permlvl = 4;
   if (message.author.id === settings.g8go) permlvl = 4;
   return permlvl;
 };
