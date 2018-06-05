@@ -3,7 +3,7 @@ exports.run = function(client, message, args) {
 
   const embed = new Discord.RichEmbed()
 
-  .addField("Discord officiel", "<:discord:447422178791522315> https://discord.gg/KeAksP5")
+  .addField("Discord officiel", "<:IZBdiscord:453594581494398976> https://discord.gg/KeAksP5")
   .setColor('RANDOM')
   .setTimestamp()
 
