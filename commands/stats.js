@@ -10,7 +10,7 @@ exports.run = function(client, message, args) {
     .addField('Server ',`46`, true)
     .addField('Library ',`Discord.js`, true)
     .addField('Owner ',`InsinityZ#0018`, true)
-    .addField('Officiel server ',`https://discord.gg/zjQnAjb`)
+    .addField('Officiel server ','`.discord`')
     .addField('Memory ',`19MB/500MB`)
     .setTimestamp()
     message.channel.send(msg)
