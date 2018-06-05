@@ -4,7 +4,7 @@ exports.run = (client, message) => {
 
       msg.edit("Acces granted ! ...");
 
-      msg.edit("<:ping3:441965765445419018> Crashed ");
+      msg.edit("<:IZBbadping:453594534534971413> Crashed ");
 
       msg.edit("Reloading ░░░░░░░░░░");
 
