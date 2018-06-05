@@ -6,12 +6,10 @@ exports.run = function(client, message, args) {
   .setColor('RANDOM')
   .setAuthor('Liste des commandes :')
   .addField(':rotating_light: Administrations', '`.reload`, `.purge`, `.warn`, `.mute`, `.say`, `.sayimg`, `.kick`, `.ban`')
-  .addField('<:games:447422120042168320> Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`, `.fortnite`')
-  .addField('<:info:447422226787074048> Infos',' `.stats`, `.invite`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`')
-  .addField('<:support:444899671555702784> Supports', '`.hsupport`, `.support`')
-  .addField('▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬', false)
-  .addField(':flag_fr: Attention ','Les commandes `.ban`, `.kick` et `.mute` ne sont pas fini !') 
-  .addField(':flag_gb: Warning ','The commands `.ban`, `.kick` and `.mute` are not finished.')
+  .addField('<:IZBgames:453594840374968350>  Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`, `.fortnite`')
+  .addField('<:IZBinfo:453594898625593344> Infos',' `.stats`, `.invite`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`')
+  .addField('<:IZBsupport:453595116297519125> Supports', '`.hsupport`, `.support`')
+ 
   .setTimestamp()
 
               message.channel.send(msg)
