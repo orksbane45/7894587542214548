@@ -1,12 +1,11 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
- if(message.content.startsWith('.adminsay')) {
 message.delete()
 
     message.channel.send(args.join(" "))
 
-    }
+    
 };
     exports.conf = {
       enabled: true,
