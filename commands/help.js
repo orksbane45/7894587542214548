@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
   .setAuthor('Liste des commandes :')
   .addField(':rotating_light: Administrations', '`.reload`, `.purge`, `.warn`, `.mute`, `.say`, `.sayimg`, `.kick`, `.ban`')
   .addField('<:IZBgames:453594840374968350>  Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`, `.fortnite`')
-  .addField('<:IZBinfo:453594898625593344> Infos',' `.stats`, `.invite`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`')
+  .addField('<:IZBinfo:453594898625593344> Infos',' `.stats`, `.invite`,`.site`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`')
   .addField('<:IZBsupport:453595116297519125> Supports', '`.hsupport`, `.support`')
  
   .setTimestamp()
