@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
 
   client.channels.get(support.id).sendEmbed(embed);
 
-  message.react('✅')
+  
 };
 
   exports.conf = {
