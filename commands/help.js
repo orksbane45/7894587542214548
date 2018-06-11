@@ -12,7 +12,7 @@ exports.run = function(client, message, args) {
  
   .setTimestamp()
 
-              message.channel.send(msg)
+              message.channel.send(msg).react("✅")
 }
 exports.conf = {
   enabled: true,
