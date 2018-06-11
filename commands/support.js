@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
 
   client.channels.get(support.id).sendEmbed(embed);
 
-  message.reply(' :white_check_mark:')
+  message.react('✅')
 };
 
   exports.conf = {
