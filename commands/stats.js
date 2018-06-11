@@ -8,7 +8,7 @@ exports.run = function(client, message, args) {
     .setThumbnail('https://cdn.discordapp.com/avatars/436596522117890058/51e0fef1965497bcc45ceeb2c859caaa.png?size=2048')
     .addField('Users ',`${client.users.size.toLocaleString()}`, true)
     .addField('Servers ',`${client.guilds.size.toLocaleString()}`, true)
-    .addField('Channels',`${client.channels.size.toLocaleString()`, true)
+    .addField('Channels',`${client.channels.size.toLocaleString()}`, true)
     .addField('Library ',`Discord.js v${version}`, true)
     .addField('Owner ',`InsinityZ#0018`, true)
     .addField('Officiel server ','`.discord`')
