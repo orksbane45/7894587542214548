@@ -13,6 +13,7 @@ exports.run = function(client, message, args) {
   .setTimestamp()
 
               message.channel.send(msg)
+}
 exports.conf = {
   enabled: true,
   guildOnly: false,
