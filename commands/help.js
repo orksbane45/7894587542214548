@@ -5,8 +5,8 @@ exports.run = function(client, message, args) {
 
   .setColor('RANDOM')
   .setAuthor('Liste des commandes :')
-  .addField(':rotating_light: Administrations', '`.reload`, `.purge`, `.warn`, `.mute`, `.say`, `.sayimg`, `.kick`, `.ban`')
-  .addField('<:IZBgames:453594840374968350>  Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`, `.fortnite`')
+  .addField(':rotating_light: Administrations', '`.reload`, `.purge`, `.warn`, `.mute`, `.say`, `.sayimg`, `.kick`, `.ban`,`.vote`')
+  .addField('<:IZBgames:453594840374968350>  Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`')
   .addField('<:IZBinfo:453594898625593344> Infos',' `.stats`, `.invite`,`.site`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`')
   .addField('<:IZBsupport:453595116297519125> Supports', '`.hsupport`, `.support`')
  
