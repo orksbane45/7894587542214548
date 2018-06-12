@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
- if(message.content.startsWith('.say ')) {
+ 
 
     let args = message.content.split(" ").slice(1);
     message.delete()
@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
     .setDescription(`${message.author.username} :` + args.join(" "))
     message.channel.send(embed)
 
-    }
+    
 };
     exports.conf = {
       enabled: true,
