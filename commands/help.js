@@ -11,9 +11,9 @@ exports.run = (client, message, params) => {
   .setColor('RANDOM')
   .setAuthor('Liste des commandes :')
   .addField(':rotating_light: Administrations', '`.reload`, `.purge`, `.warn`, `.mute`, `.say`, `.sayimg`, `.kick`, `.ban`,`.vote`')
-  .addField('<:IZBgames:453594840374968350>  Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`')
-  .addField('<:IZBinfo:453594898625593344> Infos',' `.stats`, `.invite`,`.site`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`, `.partenariat`')
-  .addField('<:IZBsupport:453595116297519125> Supports', '`.hsupport`, `.support`')
+  .addField('<:IZBgames:459689915039612928> Fun', '`.roll`, `.master`, `.8ball`, `.hug`, `.kiss`, `.cat`, `.hack`')
+  .addField('<:IZBinfo:459689946513408000> Infos',' `.stats`, `.invite`,`.site`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`, `.partenariat`')
+  .addField('<:IZBsupport:459690005246377995> Supports', '`.hsupport`, `.support`')
   .setDescription("Utilisez `.help <commandes> pour plus d'informations !`")
   .setTimestamp()
 
