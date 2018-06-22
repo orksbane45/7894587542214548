@@ -4,7 +4,7 @@ exports.run = (client, message) => {
   
   var InviteEmbed = new Discord.RichEmbed()
     .setColor("RANDOM")
-    .addField("<:IZBdiscord:453594581494398976> Lien d'invitation du bot !",'https://discordapp.com/oauth2/authorize?client_id=436596522117890058&scope=bot&permissions=2146958591')
+    .addField("<:IZBsupport:459690005246377995> Lien d'invitation du bot !",'https://discordapp.com/oauth2/authorize?client_id=436596522117890058&scope=bot&permissions=2146958591')
 
   message.channel.send(InviteEmbed)
 };
