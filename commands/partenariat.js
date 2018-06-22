@@ -5,8 +5,7 @@ exports.run = function(client, message, args) {
 
     .setColor("RANDOM")
     .setTitle("Liste des Discord partenaire :")
-    .addField(" La Meute", "<:IZBlameute:453599845609898024> https://discord.gg/jMrtt6k")
-    .addField(" L'iglou", "<:IZBliglou:453637824365723666> https://discord.gg/Zk2ezKC")
+    .addField(" L'iglou", "<:IZBdiscord:459689810668552204>  https://discord.gg/Zk2ezKC")
 
 
 
