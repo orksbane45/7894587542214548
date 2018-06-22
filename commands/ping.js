@@ -4,10 +4,10 @@ exports.run = (client, message) => {
 
 
         if (msg.createdTimestamp - message.createdTimestamp < 200)
-      msg.edit('Pong! ( <:IZBgoodping:453594990304821278> : ' + (msg.createdTimestamp - message.createdTimestamp) + 'ms)');
+      msg.edit('Pong! ( <:IZBgoodping:459689969749852160> : ' + (msg.createdTimestamp - message.createdTimestamp) + 'ms)');
 
   if (msg.createdTimestamp - message.createdTimestamp >= 200)
-      msg.edit('Pong! ( <:IZBbadping:453594938236469248> : ' + (msg.createdTimestamp - message.createdTimestamp) + 'ms)');
+      msg.edit('Pong! ( <:IZBbadping:459689768620523531> : ' + (msg.createdTimestamp - message.createdTimestamp) + 'ms)');
 
 
     });
