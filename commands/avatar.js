@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
       .setColor('RANDOM')
       .setTitle(`Avatar de ${user.username}`, `${user.avatarURL}`)
       .setImage(`${user.avatarURL}`)
-      .addField('<:IZBdiscord:453594581494398976> Lien :',`${user.avatarURL}`)
+      .addField('<:IZBdiscord:459689810668552204>  Lien :',`${user.avatarURL}`)
       .setTimestamp()
 
       message.channel.send(avatar)
