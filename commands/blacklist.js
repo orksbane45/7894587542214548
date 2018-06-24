@@ -44,7 +44,7 @@ exports.run = function(client, message, args) {
  
       }
       var json = JSON.stringify(blackList);
-      fs.writeFileSync('use/blacklist.json', json, 'utf8');
+      fs.writeFileSync('blacklist.json', json, 'utf8');
     }else if (args[0]) {
       message.channel.send('Commande : ``' +args[0]+ '`` inexistante !')
     }else{
