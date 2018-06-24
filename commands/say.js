@@ -7,7 +7,7 @@ exports.run = (client, message) => {
     message.delete()
     var embed = new Discord.RichEmbed()
     .setColor("#2C2F33")
-    .setDescription(`${message.author.username} :` + args.join(" "))
+    .setDescription(`${message.author.username} :` + ` ${args.join(" ")}`)
     message.channel.send(embed)
 
     
