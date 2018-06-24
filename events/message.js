@@ -19,7 +19,7 @@ module.exports = message => {
   if (cmd) {
     if (perms < cmd.conf.permLevel) return;
     if (message.member.hasPermission('MANAGE_MESSAGES') || message.member.hasPermission('ADMINISTRATOR') || message.author.id == 327176843709120512) return cmd.run(client, message, params, perms);
-      let rawdata = fs.readFileSync('use/blacklist.json', 'utf8');
+      let rawdata = fs.readFileSync('blacklist.json', 'utf8');
       let blackList = JSON.parse(rawdata);
       if (blackList[""+message.channel.id+""] && blackList[""+message.channel.id+""].length >= 1) {
         function sleep(ms){
