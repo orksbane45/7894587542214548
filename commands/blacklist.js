@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 exports.run = function(client, message, args) {
-  let command = ["discord", "avatar", "help", "invite","reload","ping","purge","warn","mute","stats","say","asay","sayimg","kick","ban","vote","roll","master","8ball","hug","kiss","cat","hack","codesecret","site","profile","google","partenariat","hsupport","support"];
+  let command = ["all","discord", "avatar", "help", "invite","reload","ping","purge","warn","mute","stats","say","asay","sayimg","kick","ban","vote","roll","master","8ball","hug","kiss","cat","hack","codesecret","site","profile","google","partenariat","hsupport","support"];
   if (message.member.hasPermission('MANAGE_MESSAGES') || message.member.hasPermission('ADMINISTRATOR') || message.author.id == 327176843709120512) {
     let rawdata = fs.readFileSync('blacklist.json', 'utf8');
     let blackList = JSON.parse(rawdata);
