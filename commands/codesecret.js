@@ -4,9 +4,14 @@ exports.run = (client, message, args, user, command) => {
 
 
 
+if (args == "14589724587854784587") return message.reply(`Bravo !\n**${args.join(" ")}** était le codesecret !`);
+if (args !== "14589724587854784587") return message.reply(`perdu !\n**${args.join(" ")}** n'est pas le bon code !`);
 
-if (args !== "14589724587854784587") return message.reply(`perdu !\n**${args.join(" ")}** n'est pas le bon nombre !`)
-if (args === "14589724587854784587") return message.reply(`Bravo !\n**${args.join(" ")}** était le codesecret !`)
+
+
+
+
+
 
 
 
@@ -25,6 +30,6 @@ permLevel: 0
 
 exports.help = {
 name: 'codesecret',
-description: 'Vous dits si vous étez le maître du bot !',
-usage: 'master'
+description: 'Trouvez le code secret !',
+usage: 'codesecret'
 };
