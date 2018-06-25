@@ -15,20 +15,17 @@ exports.run = (client, message, args) => {
   if (!message.guild.member(user).kickable) return message.reply("Je ne peut pas kick cet utilisateur.");
   message.guild.member(user).kick();
 
-  const embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .setTimestamp()
-      .addField('Action:', 'Kick')
-      .addField('User:', `${user.username}#${user.discriminator}`)
-      .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`);
-      return client.channels.get(modlog.id).sendEmbed(embed);
+    
+    message.channel.send(`**${user}** ban avec succes !`);
+  }
+  
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 4
+  permLevel: 0
 };
 
 exports.help = {
