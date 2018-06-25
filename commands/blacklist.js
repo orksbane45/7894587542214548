@@ -12,14 +12,14 @@ exports.run = function(client, message, args) {
           blcmd = blcmd + " ``"+blackList[""+message.channel.id+""][i]+"`` ";
         }
         console.log(blackList[""+message.channel.id+""]);
-        message.channel.send(`**Liste des commandes blackList sur le channel <#${message.channel.id}> :** \n\n${blcmd}`);
+        message.channel.send(`** <:IZBadmin:460849349019303936> Liste des commandes blackList sur le channel <#${message.channel.id}> :** \n\n${blcmd}`);
       }else{
-        message.channel.send(`Aucune commande blackList sur le channel <#${message.channel.id}>`)
+        message.channel.send(`<:IZBadmin:460849349019303936> Aucune commande blackList sur le channel <#${message.channel.id}>`)
       }
     }else if (command.filter(s => s.includes(args[0])) == args[0]) {
       if (blackList[""+message.channel.id+""]) {
         if (blackList[""+message.channel.id+""].filter(s => s.includes(args[0])) == args[0]) {
-          message.channel.send('Commande ``'+args[0]+'`` unblacklisted');
+          message.channel.send('<:IZBadmin:460849349019303936> Commande ``'+args[0]+'`` unblacklisted');
           function remove(arr, what) {
             if (blackList[""+message.channel.id+""].length == 0) {
               delete blackList[""+message.channel.id+""];
@@ -34,24 +34,24 @@ exports.run = function(client, message, args) {
           }
           remove(blackList[""+message.channel.id+""],args[0])
         }else{
-          message.channel.send('Commande ``'+args[0]+'`` blacklisted ')
+          message.channel.send('<:IZBadmin:460849349019303936> Commande ``'+args[0]+'`` blacklisted ')
           blackList[""+message.channel.id+""].push(args[0]);
         }
       }else{
           blackList[""+message.channel.id+""] = [];
           blackList[""+message.channel.id+""].push(args[0]);
-          message.channel.send('Commande ``'+args[0]+'`` blacklisted ')
+          message.channel.send('<:IZBadmin:460849349019303936> Commande ``'+args[0]+'`` blacklisted ')
  
       }
       var json = JSON.stringify(blackList);
       fs.writeFileSync('blacklist.json', json, 'utf8');
     }else if (args[0]) {
-      message.channel.send('Commande : ``' +args[0]+ '`` inexistante !')
+      message.channel.send('<:IZBadmin:460849349019303936> Commande : ``' +args[0]+ '`` inexistante !')
     }else{
       message.channel.send('Utilisation : `.bl {commande}` / `.bl list`')
     }
   }else {
-    message.channel.send('Permisions insufisantes !')
+    message.channel.send('<:IZBadmin:460849349019303936> Permisions insufisantes ! <:IZBadmin:460849349019303936>')
   }
 }
  
