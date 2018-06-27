@@ -65,5 +65,6 @@ permLevel: 0
 exports.help = {
 name: 'blacklist',
 description: 'Met à jour la blacklist des commandes dans le channel',
-usage: 'blacklist'
+usage: 'blacklist',
+aliase: ['bl']
 };
