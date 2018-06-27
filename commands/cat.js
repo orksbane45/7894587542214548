@@ -165,5 +165,6 @@ exports.run = function(client, message, args) {
       exports.help = {
         name: 'cat',
         description: 'null',
-        usage: 'cat'
+        usage: 'cat',
+        aliase: ['aucun']
       }
