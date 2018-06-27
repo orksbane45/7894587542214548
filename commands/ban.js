@@ -31,5 +31,6 @@ exports.conf = {
 exports.help = {
   name: 'ban',
   description: 'Ban un utilisateur.',
-  usage: 'ban [mention]'
+  usage: 'ban [mention]',
+  aliase: ['aucun']
 };
