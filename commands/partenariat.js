@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
 
     .setColor("RANDOM")
     .setTitle("Liste des Discord partenaire :")
-    .addField(" L'iglou", "<:IZBdiscord:459689810668552204>  https://discord.gg/Zk2ezKC")
+    .addField(" L'igloo", "<:IZBdiscord:459689810668552204>  https://discord.gg/Zk2ezKC")
 
 
 
@@ -24,5 +24,6 @@ exports.conf = {
 exports.help = {
   name: 'partenariat',
   description: 'null',
-  usage: 'partenariat'
+  usage: 'partenariat',
+  aliase: ['pt']
 };
