@@ -31,5 +31,6 @@ exports.run = function(client, message, args) {
     exports.help = {
       name: '8ball',
       description: 'Répond a votre question !',
-      usage: '8ball'
+      usage: '8ball <question>',
+      aliase: ['aucun']
     }
