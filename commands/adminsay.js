@@ -17,5 +17,6 @@ message.delete()
     exports.help = {
       name: 'adminsay',
       description: 'Le bot redit ce que vous ditez !',
-      usage: 'adminsay [message]'
+      usage: 'adminsay <message>',
+      aliase: ['asay']
 }
