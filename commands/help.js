@@ -28,7 +28,7 @@ exports.run = (client, message, params) => {
       const msg2 = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setTitle(`**Commande :** ${command.help.name}`)
-      .setDescription(`Description : ${command.help.description}\nUsage : ${command.help.usage}`)
+      .setDescription(`**Description :** ${command.help.description}\n**Usage :** ${command.help.usage}\n**Aliases :** ${command.help.aliase}`)
   message.channel.send(msg2)
     }
       
@@ -45,5 +45,6 @@ exports.conf = {
 exports.help = {
   name: 'help',
   description: 'Liste des commandes du bot !',
-  usage: 'help [command]'
+  usage: 'help [command]',
+  aliase: ['h , halp']
 };
