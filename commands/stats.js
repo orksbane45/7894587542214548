@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
   const msg = new Discord.RichEmbed()
     .setColor('RANDOM')
     .setTitle(`Stats d'InsinityZ'Bot`)
-    .setThumbnail('https://cdn.discordapp.com/avatars/436596522117890058/51e0fef1965497bcc45ceeb2c859caaa.png?size=2048')
+    .setThumbnail(client.avatarURL)
     .addField('Users ',`${client.users.size}`, true)
     .addField('Servers ',`${client.guilds.size}`, true)
     .addField('Channels',`${client.channels.size}`, true)
