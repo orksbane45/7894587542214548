@@ -31,5 +31,6 @@ permLevel: 0
 exports.help = {
 name: 'codesecret',
 description: 'Trouvez le code secret !',
-usage: 'codesecret'
+usage: 'codesecret',
+aliase: ['cs']
 };
