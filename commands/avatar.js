@@ -7,9 +7,8 @@ exports.run = (client, message, args) => {
 
       .setColor('RANDOM')
       .setTitle(`Avatar de ${user.username}`, `${user.avatarURL}`)
-      .setImage(`${user.avatarURL}`)
-      .addField('<:IZBdiscord:459689810668552204>  Lien :',`${user.avatarURL}`)
-      .setTimestamp()
+      .setThumbnail(`${user.avatarURL}`)
+      
 
       message.channel.send(avatar)
     };
@@ -24,5 +23,6 @@ exports.run = (client, message, args) => {
     exports.help = {
       name: 'avatar',
       description: 'null',
-      usage: 'avatar [mention]'
+      usage: 'avatar [mention]',
+      aliase: ['aucun']
     };
