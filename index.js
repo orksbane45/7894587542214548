@@ -42,28 +42,18 @@ client.reload = command => {
     } catch (e){
       reject(e);
     }
-    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
-  if(!prefixes[message.guild.id]){
-    prefixes[message.guild.id] = {
-      prefixes: settings.prefix
+  });
 };
-  };
-   let prefix = prefixes[message.guild.id].prefixes;
-  if(!message.content.startsWith(prefix)) return;
-  
-  
-});
 
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
      is then sent to the command handler for verification*/
   let permlvl = 0;
-  let mod_role = message.guild.roles.find('modo', settings.modrolename);
+  let mod_role = message.guild.roles.find('name', settings.modrolename);
   if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
-  let admin_role = message.guild.roles.find('admin', settings.adminrolename);
+  let admin_role = message.guild.roles.find('name', settings.adminrolename);
   if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
   if (message.author.id === settings.ownerid) permlvl = 4;
-  if (message.author.id === settings.g8go) permlvl = 4;
   return permlvl;
 };
 
@@ -81,4 +71,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.TOKEN);
+client.login(settings.token);
