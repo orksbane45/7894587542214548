@@ -47,7 +47,7 @@ client.reload = command => {
     prefixes[message.guild.id] = {
       prefixes: settings.prefix
 };
-  });
+  };
    let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   
