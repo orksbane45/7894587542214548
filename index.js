@@ -52,7 +52,7 @@ client.reload = command => {
   if(!message.content.startsWith(prefix)) return;
   
   
-};
+});
 
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
