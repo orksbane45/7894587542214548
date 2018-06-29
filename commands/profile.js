@@ -1,14 +1,24 @@
 const Discord = require('discord.js');
 exports.run = function(client, message, args) {
-
+  let day = message.guild.joinedAt.getDate()
+  let month = 1 + message.guild.joinedAt.getMonth()
+  let year = message.guild.joinedAt.getFullYear()
+  let hour = message.guild.joinedAt.getHours()
+  let min = message.guild.joinedAt.getMinutes()
+  let days = message.author.createdAt.getDate()
+  let months = 1 + message.author.createdAt.getMonth()
+  let years = message.author.createdAt.getFullYear()
+  let hours = message.author.createdAt.getHours()
+  let mins = message.author.createdAt.getMinutes()
   const msg = new Discord.RichEmbed()
     .setColor('RANDOM')
-    .setTitle(`Profile de ** ${message.author.username} **`)
+    .setTitle(`Profile de **${message.author.username}**`)
     .setThumbnail(`${message.author.avatarURL}`)
     .addField('Pseudo', `${message.author.username}`)
-    .addField('Création du compte' , `${message.author.createdAt}`)
+    .addField('Création du compte' , `${days}/${months}/${years} à ${hours}:${mins}`)
+    .addField("Date d'arrivée", `${day}/${month}/${year} à ${hour}:${min}`)
     .addField('Status', `${message.author.presence.status}`)
-    .addField('ID', `${message.author.id}`)
+    .addField('IZcoins', "SOON")
     .setTimestamp()
     message.channel.send(msg)
 
