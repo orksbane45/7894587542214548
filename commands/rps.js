@@ -14,7 +14,7 @@ var choice = args[0];
       var response = "J'ai choisi **ciseaux** ! :scissors: J'ai gagné !"
     } else if (choice2 == "papier") {
       var response = "J'ai choisi **papier** ! :hand_splayed: Egalité !"
-    } else if if (choice2 == "pierre"){
+    } else if (choice2 == "pierre") {
       var response = "J'ai choisi **pierre** ! <:IZBpierre:462292033277657109> Tu as gagné !"
     }
     message.channel.send(response);
@@ -31,7 +31,7 @@ var choice = args[0];
       var response = "J'ai choisi **papier** ! :hand_splayed: J'ai gagné !"
     } else if (choice2 == "pierre") {
       var response = "J'ai choisi **pierre** ! <:IZBpierre:462292033277657109> Egalité !"
-    } else {
+    } else if (choice2 == "ciseaux") {
       var response = "J'ai choisi **ciseaux** ! :scissors: Tu as gagné !"
     }
     message.channel.send(response);
@@ -44,11 +44,11 @@ var choice = args[0];
     } else {
       var choice2 = "ciseaux";
     }
-    if (choice2 == "pierre") {
+    if (choice2 == "papier") {
       var response = "J'ai choisi **papier** ! :hand_splayed: Tu as gagné !"
-    } else if (choice2 == "siceaux") {
+    } else if (choice2 == "ciceaux") {
       var response = "J'ai choisi **ciseaux** ! :scissors: Egalité !"
-    } else {
+    } else if (choice2 == "pierre") {
       var response = "J'ai choisi **pierre** ! <:IZBpierre:462292033277657109> J'ai gagné !"
     }
     message.channel.send(response);
