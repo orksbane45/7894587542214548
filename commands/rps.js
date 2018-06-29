@@ -3,11 +3,11 @@ exports.run = (client, message, args) => {
 var choice = args[0];
   if (choice == "papier" || choice == "p") {
     var numb = Math.floor(Math.random() * 100);
-    if (numb <= 50) {
+    if (numb <= 35) {
       var choice2 = "papier";
-    } else if (numb > 50) {
+    } else if (numb >= 35 < 75) {
       var choice2 = "pierre";
-    } else {
+    } else if (numb >= 75) {
       var choice2 = "ciseaux";
     }
     if (choice2 == "ciseaux") {
