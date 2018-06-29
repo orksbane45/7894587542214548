@@ -14,7 +14,7 @@ var choice = args[0];
       var response = "J'ai choisi **ciseaux** ! :scissors: J'ai gagné !"
     } else if (choice2 == "papier") {
       var response = "J'ai choisi **papier** ! :hand_splayed: Egalité !"
-    } else {
+    } else if if (choice2 == "pierre"){
       var response = "J'ai choisi **pierre** ! <:IZBpierre:462292033277657109> Tu as gagné !"
     }
     message.channel.send(response);
