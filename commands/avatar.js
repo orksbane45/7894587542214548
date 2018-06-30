@@ -24,5 +24,5 @@ exports.run = (client, message, args) => {
       name: 'avatar',
       description: 'null',
       usage: 'avatar [mention]',
-      aliase: ['aucun']
+      aliase: ['pp , pdp']
     };
