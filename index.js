@@ -66,7 +66,15 @@ var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('warn', e => {
   console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
 });
+client.on("guildMemberAdd", async member => {
+  console.log(`${member.id} joined the server.`)
 
+  let welcomechannel = member.guild.channels.find("name", "bienvenue")
+  let welcomeembed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setDescription(`Bienvenue, ${member} !`)
+  welcomechannel.send(welcomeembed);
+});
 client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
