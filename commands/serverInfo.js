@@ -19,8 +19,10 @@ module.exports.run = async (bot, message, args) => {
     .setColor("RANDOM")
     .setThumbnail(sicon)
     .addField("Nom du serveur", message.guild.name)
-    .addField("Date de création du serveur", `${day}`)
-    .addField("Membres", message.guild.memberCount);
+    .addField("Date de création du serveur", `${day}/${month}/${year} à ${hour}:${min}`)
+    .addField("Membres", message.guild.memberCount)
+    .addField("Fondateur", message.guild.owner)
+    .addField("Rôles", message.guild.roles);
 
     message.channel.send(serverembed);
 }
