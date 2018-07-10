@@ -22,6 +22,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("ID du serveur", message.guild.id)
     .addField("Date de création du serveur", `${day}/${month}/${year} à ${hour}:${min}`)
     .addField("Membres", message.guild.memberCount)
+    .addField('channels' , message.guild.channel.size)
     .addField("Fondateur", message.guild.owner)
     .addField("Rôles", message.guild.roles.size)
     .addField("Emojis", message.guild.emojis.size)
