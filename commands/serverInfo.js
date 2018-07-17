@@ -24,8 +24,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Membres", message.guild.memberCount)
     .addField('channels' , message.guild.channels.size)
     .addField("Fondateur", message.guild.owner)
-    .addField("Rôles", message.guild.roles)
-    .addField("Emojis", message.guild.emojis)
+    .addField("Rôles", message.guild.roles.size)
+   
     .addField("Régions du serveur", message.guild.region)
     .addField('Status des membres', `**${message.guild.members.filter(o => o.presence.status === 'online').size}** En ligne\n**${message.guild.members.filter(i => i.presence.status === 'idle').size}** Inactif\n**${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size}** Ne pas déranger\n**${message.guild.members.filter(off => off.presence.status === 'offline').size}** Déconnecté/Invisible\n**${message.guild.members.filter(s => s.presence.status === 'streaming').size}** Streaming`)
 
