@@ -10,6 +10,7 @@ exports.run = function(client, message, args) {
 
   const msg = new Discord.RichEmbed()
     .setColor('RANDOM')
+  .setThumbnail('https://images-ext-1.discordapp.net/external/yBZIxBTRPnQ8_EaNNt7xe7SOkNMCT4ctn8Hz_K_X-mg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/436596522117890058/0bf84863be053cb63f0cfa27aca46e3b.png?width=663&height=663')
     .setTitle(`Stats d'InsinityZ'Bot`)
     .setThumbnail(client.avatarURL)
     .addField('Utilisateurs ',`${client.users.size}`, true)
