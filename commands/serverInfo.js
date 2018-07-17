@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
     .addField('channels' , message.guild.channel.size)
     .addField("Fondateur", message.guild.owner)
     .addField("Rôles", message.guild.roles.size)
-    .addField("Emojis", message.guild.emojis.size)
+    .addField("Emojis", message.guild.emojis)
     .addField("Régions du serveur", message.guild.region)
 
     message.channel.send(serverembed);
