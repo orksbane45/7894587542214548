@@ -4,15 +4,17 @@ exports.run = function(client, message, args) {
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
+}else {
+message.reply("Vous n'avez pas les bonnes permissions !");
+     };
 };
-
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
   permLevel: 0
 };
-};
+
 exports.help = {
   name: 'purge',
   description: 'Clear les messages du channel !',
