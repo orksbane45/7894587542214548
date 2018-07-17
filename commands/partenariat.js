@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
     .setTitle("Liste des Discord partenaire :")
     .addField("L'Auberge", "<:IZBPlauberge:463002259933102081>  https://discord.gg/Xd2bZXk")
     .addField("L'igloo", "<:IZBdiscord:459689810668552204>  https://discord.gg/Zk2ezKC")
-    .addField("Loup Garous","<:IZBdiscord:459689810668552204> https://discord.gg/YGcYcKF"
+    .addField("Loup Garous","<:IZBdiscord:459689810668552204> https://discord.gg/YGcYcKF")
 
 
 
