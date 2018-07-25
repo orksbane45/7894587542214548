@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
 
       message.channel.send(`${user.username} a était ban !`)
    }else{
-     message.reply("Vous n'avez pas les permissions requise pour ban un utilisateur");
+     message.reply("Vous n'avez pas les permissions requises pour ban un utilisateur");
    };
 };
 
