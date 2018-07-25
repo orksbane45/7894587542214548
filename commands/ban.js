@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
+  
+   if (message.member.hasPermission('BAN_MEMBERS') || message.member.hasPermission('ADMINISTRATOR') || message.author.id == 327176843709120512) {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mod-log');
@@ -19,13 +21,16 @@ exports.run = (client, message, args) => {
       return client.channels.get(modlog.id).sendEmbed(embed);
 
       message.channel.send(`${user.username} a était ban !`)
+   }else{
+     message.reply("Vous n'avez pas les permissions requise pour ban un utilisateur");
+   };
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 4
+  permLevel: 0
 };
 
 exports.help = {
