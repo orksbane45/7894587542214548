@@ -37,7 +37,7 @@ exports.run = function(client, message, args) {
         enabled: true,
         guildOnly: false,
         aliases: [],
-        permLevel: 0
+        permLevel: 4
       };
 
       exports.help = {
