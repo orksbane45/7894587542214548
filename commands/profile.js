@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const mysql = require('mysql');
 exports.run = function(client, message, args) {
   let day = message.guild.joinedAt.getDate()
   let month = 1 + message.guild.joinedAt.getMonth()
@@ -10,18 +11,28 @@ exports.run = function(client, message, args) {
   let years = message.author.createdAt.getFullYear()
   let hours = message.author.createdAt.getHours()
   let mins = message.author.createdAt.getMinutes()
-  const msg = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setTitle(`Profile de **${message.author.username}**`)
-    .setThumbnail(`${message.author.avatarURL}`)
-    .addField('Pseudo', `${message.author.username}`)
-    .addField('Création du compte' , `${days}/${months}/${years} à ${hours}:${mins}`)
-    .addField("Date d'arrivée", `${day}/${month}/${year} à ${hour}:${min}`)
-    .addField('Status', `${message.author.presence.status}`)
-    .addField('IZcoins', "SOON")
-    .setTimestamp()
-    message.channel.send(msg)
 
+  var mySqlClient = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "insinityz"
+  });
+  mySqlClient.connect();
+  mySqlClient.query(`SELECT * FROM user WHERE userid=${message.author.id}`, function (error, results, fields){
+  var izcoins4 = results[0].izcoins;
+    const msg = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle(`Profile de **${message.author.username}**`)
+      .setThumbnail(`${message.author.avatarURL}`)
+      .addField('Pseudo', `${message.author.username}`)
+      .addField('Création du compte' , `${days}/${months}/${years} à ${hours}:${mins}`)
+      .addField("Date d'arrivée", `${day}/${month}/${year} à ${hour}:${min}`)
+      .addField('Jeux', `${message.author.presence.status}`)
+      .addField('IZcoins', izcoins4, true)
+      .setTimestamp()
+    message.channel.send(msg)
+  });
 }
 
   exports.conf = {
