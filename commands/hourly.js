@@ -14,7 +14,6 @@ function ifhourly (hourly) {
   }else {
     return false;
   }
-
 }
 
 exports.run = (client, message, args, user, command) => {
@@ -24,48 +23,38 @@ exports.run = (client, message, args, user, command) => {
     password: "tsuki",
     database: "insinityz"
   });
-  mySqlClient.connect();
+mySqlClient.connect();
   mySqlClient.query(`SELECT * FROM user WHERE userid=${message.author.id}`, function (error, results, fields){
-  if (results.length > 0) {
-    var hrrandom = Math.floor((Math.random() * 4) + 1);
-  if (hrrandom == 1) {
-      hrrandom =  "10";
-  }
-  if (hrrandom == 2) {
-      hrrandom =  "15";
-  }
-  if (hrrandom == 3) {
-      hrrandom =  "20";
-  }
-  if (hrrandom == 4) {
-      hrrandom =  "25";
-  }  
-  var hourly = results[0].hourly;
-  var test = ifhourly(hourly); 
-  console.log(test);
-  if (test == true) {
-    var izcoins4 = results[0].izcoins + hrrandom;
-    var sql2 = `UPDATE user SET izcoins = '${izcoins4}' WHERE userid = '${results[0].userid}'`;
-    mySqlClient.query(sql2 , function (err, result) {
-    if (error) throw error;
-    message.channel.send(`<:IZBmoney2:459689993409921024> l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
-    });
-  }else{
-    message.channel.send(`:clock11: Veuillez attendre les 24h`)
-  }
-  console.log(results[0].userid);
-  }else {
-    console.log(chalk.black.bgRed("TA MERE T INEXISTANT PD !"));
-    var n = Date.now();
-    console.log(n);  
-    var sql1 = `INSERT INTO user (userid, izcoins, hourly) VALUES ('${message.author.id}', '${hrrandom}', '${Date.now()}')`;
-    mySqlClient.query(sql1 , function (err, result) {
-      if (error) console.log(error);
-      console.log(chalk.black.bgGreen("cc toi !"));
-      message.channel.send(`<:IZBmoney2:459689993409921024> l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins !`);
-      console.log(result);   
-    });
-  };
+    if (results.length > 0) {
+      var hrrandom = Math.floor((Math.random() * 4) + 1);
+      var tab = [0, 10, 15, 20, 25];
+      hrrandom = tab[hrrandom];
+      var hourly = results[0].hourly;
+      var test = ifhourly(hourly); 
+      console.log(test);
+      if (test == true) {
+        var izcoins4 = results[0].izcoins + hrrandom;
+        var sql2 = `UPDATE user SET izcoins = '${izcoins4}' WHERE userid = '${results[0].userid}'`;
+        mySqlClient.query(sql2 , function (err, result) {
+          if (error) throw error;
+          message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
+        });
+      }else{
+        message.channel.send(`:clock11: Veuillez attendre les 24h`)
+      }
+      console.log(results[0].userid);
+    }else {
+      console.log(chalk.black.bgRed("TA MERE T INEXISTANT PD !"));
+      var n = Date.now();
+      console.log(n);  
+      var sql1 = `INSERT INTO user (userid, izcoins, hourly) VALUES ('${message.author.id}', '${hrrandom}', '${Date.now()}')`;
+      mySqlClient.query(sql1 , function (err, result) {
+        if (error) console.log(error);
+        console.log(chalk.black.bgGreen("cc toi !"));
+        message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins !`);
+        console.log(result);   
+      });
+    };  
   });
 }
 
