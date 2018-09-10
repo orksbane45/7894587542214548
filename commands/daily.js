@@ -20,8 +20,8 @@ function ifdaily (daily) {
 exports.run = (client, message, args, user, command) => {
   var mySqlClient = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "tsuki",
+    password: "tsuki",
     database: "insinityz"
   });
   mySqlClient.connect();
@@ -39,7 +39,7 @@ exports.run = (client, message, args, user, command) => {
           message.channel.send('<:IZBmoney2:459689993409921024> l\'argent a bien ete credité sur votre compte vous avez recu **200** IZcoins');
       });
     }else{
-      message.channel.send(`:clock11: Veuillez encore attendre les 24h`)
+	message.channel.send(`:clock11: Tu as déjà récupéré ton daily, reviens dans ${daily + 24*60*60*1000 - Date.now()}`)
     }
 
       console.log(results[0].userid);
@@ -52,7 +52,7 @@ exports.run = (client, message, args, user, command) => {
       mySqlClient.query(sql1 , function (err, result) {
         if (error) console.log(error);
         console.log(chalk.black.bgGreen("cc toi !"));
-        message.channel.send('<:IZBmoney2:459689993409921024> l\'argent a bien ete credité sur votre compte vous avez recu **200** IZcoins');
+        message.channel.send('<a:IZBGizcoins:459689794675540009>  l\'argent a bien ete credité sur votre compte vous avez recu **200** IZcoins');
         console.log(result);
         
       });

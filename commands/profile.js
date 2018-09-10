@@ -14,8 +14,8 @@ exports.run = function(client, message, args) {
 
   var mySqlClient = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "tsuki",
+    password: "tsuki",
     database: "insinityz"
   });
   mySqlClient.connect();
@@ -29,7 +29,7 @@ exports.run = function(client, message, args) {
       .addField('Création du compte' , `${days}/${months}/${years} à ${hours}:${mins}`)
       .addField("Date d'arrivée", `${day}/${month}/${year} à ${hour}:${min}`)
       .addField('Jeux', `${message.author.presence.status}`)
-      .addField('IZcoins', izcoins4, true)
+      .addField('<a:IZBGizcoins:459689794675540009> IZcoins', izcoins4, true)
       .setTimestamp()
     message.channel.send(msg)
   });

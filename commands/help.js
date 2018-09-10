@@ -15,7 +15,7 @@ exports.run = (client, message, params) => {
   .addField('<:IZBgames:459689915039612928> Fun', '`.roll`, `.master`, `.rps`, `.8ball`, `.slap`, `.serveurinfo`, `.hug`, `.kiss`, `.cat`, `.hack`, `.codesecret`,`.say`')
   .addField('<:IZBinfo:459689946513408000> Infos',' `.stats`, `.invite`, `.site`, `.discord`, `.ping`, `.help`, `.profile`, `.google`, `.avatar`, `.partenariat`')
   .addField('<:IZBsupport:459690005246377995> Supports', '`.hsupport`, `.support`')
-  .addField('<:IZBdev:465212359883882508> Commandes en DEV','`.daily`, `.dog`')
+  .addField('<a:IZBGizcoins:459689794675540009> Aventure ','`.daily`, `SOON`')
   .setDescription("Utilisez `.help <commandes> pour plus d'informations !`")
   .setTimestamp()
 
