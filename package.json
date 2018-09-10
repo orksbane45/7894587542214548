@@ -1,17 +1,17 @@
 {
-  "name": "insinityz",
-  "version": "0.0.1",
+  "name": "bot",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "InsinityZ",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",
-    "discord.js": "^11.3.2",
-    "fs": "0.0.1-security",
-    "moment": "^2.22.1"
+    "discord.js": "^11.4.2",
+    "moment": "^2.22.2",
+    "mysql": "^2.16.0"
   }
 }
