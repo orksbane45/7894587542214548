@@ -54,7 +54,7 @@ mySqlClient.connect();
       mySqlClient.query(sql1 , function (err, result) {
         if (error) console.log(error);
         console.log(chalk.black.bgGreen("cc toi !"));
-        message.channel.send(`:clock11: Veuillez attendre encore ${daily + 24*60*60*1000 - Date.now().format('HH:mm:ss'}`);
+        message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
         console.log(result);   
       });
     };  
