@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const moment = require('moment');
 
 function ifhourly (hourly) {
+  if (hourly == 0) return false;
   var d2 = Date.now();
   console.log(`hourly = ${hourly}`);
   console.log(`d2 = ${d2}`);
@@ -23,13 +24,15 @@ exports.run = (client, message, args, user, command) => {
     password: "tsuki",
     database: "insinityz"
   });
+(modifié)
 mySqlClient.connect();
   mySqlClient.query(`SELECT * FROM user WHERE userid=${message.author.id}`, function (error, results, fields){
     if (results.length > 0) {
       var hrrandom = Math.floor((Math.random() * 4) + 1);
       var tab = [0, 10, 15, 20, 25];
       hrrandom = tab[hrrandom];
-      var hourly = results[0].hourly;
+      if (result[0].hourly == null) var hourly = 0;
+      else var hourly = results[0].hourly;
       var test = ifhourly(hourly); 
       console.log(test);
       if (test == true) {
@@ -40,7 +43,7 @@ mySqlClient.connect();
           message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
         });
       }else{
-        message.channel.send(`:clock11: Veuillez attendre les 24h`)
+        message.channel.send(`:clock11: Veuillez attendre encore ${daily + 24*60*60*1000 - Date.now().format('HH:mm:ss'}`)
       }
       console.log(results[0].userid);
     }else {
@@ -51,7 +54,7 @@ mySqlClient.connect();
       mySqlClient.query(sql1 , function (err, result) {
         if (error) console.log(error);
         console.log(chalk.black.bgGreen("cc toi !"));
-        message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins !`);
+        message.channel.send(`:clock11: Veuillez attendre encore ${daily + 24*60*60*1000 - Date.now().format('HH:mm:ss'}`);
         console.log(result);   
       });
     };  
