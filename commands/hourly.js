@@ -54,7 +54,7 @@ mySqlClient.connect();
       mySqlClient.query(sql1 , function (err, result) {
         if (error) console.log(error);
         console.log(chalk.black.bgGreen("cc toi !"));
-        message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
+        message.channel.send(`:IZBmoney2: l argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
         console.log(result);   
       });
     };  
