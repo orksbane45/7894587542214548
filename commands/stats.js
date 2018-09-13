@@ -19,7 +19,7 @@ exports.run = function(client, message, args) {
     .addField('Uptime', uptime , true)
     .addField('Créateur ',`InsinityZ 夏樹#1349`, true)
     .addField('Officiel server ','`.discord`')
-    .addField('Stockage ',`18.1MB/500MB`)
+    .addField('Vip',"paypal.me/InsinityZ")
     .setTimestamp()
     message.channel.send(msg)
 
