@@ -43,7 +43,7 @@ mySqlClient.connect();
           message.channel.send(`:IZBmoney2: l\'argent a bien ete credité sur votre compte vous avez recu **${hrrandom}** IZcoins`);
         });
       }else{
-        message.channel.send(`:clock11: Veuillez attendre encore ${daily + 24*60*60*1000 - Date.now().format('HH:mm:ss'}`)
+        message.channel.send(`:clock11: Veuillez attendre encore ${daily + 24*60*60*1000 - Date.now().format('HH:mm:ss')}`)
       }
       console.log(results[0].userid);
     }else {
