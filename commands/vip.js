@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const settings = require('../settings.json');
 exports.run = function(client, message, args) {
 
-let vipemebed = new Discord.RichEmbed()
+let vip = new Discord.RichEmbed()
 .setColor('RANDOM')
 .addField("Tu veut être VIP ?","paypal.me/InsinityZ")
 .setDescription("prochaine MAJ")
@@ -10,7 +10,7 @@ let vipemebed = new Discord.RichEmbed()
   
   
   
- message.channel.send(vipembed);
+ message.channel.send(vip);
    
 };
 
