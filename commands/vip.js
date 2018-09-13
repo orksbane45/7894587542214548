@@ -11,7 +11,7 @@ let vipemebed = new Discord.RichEmbed()
   
   
  message.channel.send(vipembed);
-    });
+   
 };
 
 exports.conf = {
