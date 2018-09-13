@@ -19,7 +19,7 @@ function ifdaily (daily) {
 
 exports.run = (client, message, args, user, command) => {
   var mySqlClient = mysql.createConnection({
-    host: "localhost",
+    host: "35.234.135.35",
     user: "tsuki",
     password: "tsuki",
     database: "insinityz"
